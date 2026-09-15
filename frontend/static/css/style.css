@@ -1,0 +1,27 @@
+﻿* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Tahoma, sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; padding: 2rem; }
+header { text-align: center; margin-bottom: 2rem; }
+header h1 { font-size: 2rem; color: #7c3aed; }
+header p { color: #94a3b8; margin-top: 0.5rem; }
+main { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+.card { background: #1e2130; border: 1px solid #2d3149; border-radius: 12px; padding: 1.5rem; }
+.card h2 { margin-bottom: 1rem; font-size: 1.1rem; color: #a78bfa; }
+.drop-zone { border: 2px dashed #4c1d95; border-radius: 8px; padding: 2rem; text-align: center; cursor: pointer; transition: border-color 0.2s; }
+.drop-zone:hover { border-color: #7c3aed; }
+.drop-zone p { margin-bottom: 0.5rem; }
+.drop-zone small { color: #64748b; display: block; margin-bottom: 0.3rem; }
+.drop-zone button { margin-top: 1rem; }
+button { background: #7c3aed; color: white; border: none; padding: 0.5rem 1.2rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; transition: background 0.2s; }
+button:hover { background: #6d28d9; }
+button:disabled { background: #374151; cursor: not-allowed; }
+.controls { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+select { background: #0f1117; color: #e2e8f0; border: 1px solid #2d3149; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.9rem; }
+.hidden { display: none; }
+.muted { color: #64748b; }
+#summary-result, #upload-result { margin-top: 1rem; padding: 1rem; background: #0f1117; border-radius: 8px; border: 1px solid #2d3149; }
+.conversation-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #0f1117; border-radius: 8px; margin-bottom: 0.5rem; cursor: pointer; border: 1px solid transparent; transition: border-color 0.2s; }
+.conversation-item:hover, .conversation-item.selected { border-color: #7c3aed; }
+.badge { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; background: #4c1d95; margin-right: 0.3rem; }
+.ready-prompt { background: #1a1a2e; border: 1px solid #7c3aed; border-radius: 6px; padding: 1rem; margin-top: 0.75rem; font-family: monospace; font-size: 0.85rem; white-space: pre-wrap; word-break: break-word; }
+.copy-btn { margin-top: 0.5rem; background: #065f46; font-size: 0.8rem; }
+.copy-btn:hover { background: #047857; }

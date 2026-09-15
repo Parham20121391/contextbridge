@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContextBridge</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🌉 ContextBridge</h1>
+    <p>مکالماتت رو از Claude و ChatGPT import کن، خلاصه بگیر، و در session جدید ادامه بده</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>📂 آپلود مکالمه</h2>
+      <div class="drop-zone" id="drop-zone">
+        <p>فایل JSON export رو اینجا بذار</p>
+        <small>Claude.ai → Settings → Export Data</small>
+        <small>ChatGPT → Settings → Data Controls → Export</small>
+        <input type="file" id="file-input" accept=".json" hidden>
+        <button onclick="document.getElementById('file-input').click()">انتخاب فایل</button>
+      </div>
+      <div id="upload-result" class="hidden"></div>
+    </section>
+    <section class="card">
+      <h2>💬 مکالمات ذخیره شده</h2>
+      <div id="conversations-list"><p class="muted">هنوز مکالمه‌ای آپلود نشده</p></div>
+    </section>
+    <section class="card">
+      <h2>🧠 خلاصه‌سازی هوشمند</h2>
+      <div class="controls">
+        <select id="model-select">
+          <option value="gemini">Gemini</option>
+          <option value="openrouter">OpenRouter (رایگان)</option>
+        </select>
+        <select id="style-select">
+          <option value="detailed">کامل</option>
+          <option value="brief">خلاصه</option>
+          <option value="bullets">لیستی</option>
+        </select>
+        <button id="summarize-btn" disabled>خلاصه کن</button>
+      </div>
+      <div id="summary-result" class="hidden"></div>
+    </section>
+  </main>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
