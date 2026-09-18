@@ -1,8 +1,5 @@
-﻿# ContextBridge
+# ContextBridge
 
-## اجرا
-```
-cd backend
-uvicorn main:app --reload --port 8000
-```
-سپس: http://localhost:8000
+## By
+
+**Parham RahimPour** [@GitHub](plugin://github@openai-curated-remote)
